@@ -1,0 +1,132 @@
+nav{
+    display: flex;
+    background-color: #007991;
+    width: 100%;
+    height: 12vh;
+    justify-content: space-between;
+}
+
+.logo-container{
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.nav-menu{
+    list-style-type: none;
+    display: flex;
+    margin-right: 100px ;
+    justify-content: space-between;
+    width: 20%;
+    color: white;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+ul li:hover{
+  color: rgba(6, 255, 255, 0.904);
+}
+
+
+/* Media queries for responsiveness */
+/* Existing styles */
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav {
+      flex-direction: row;
+      justify-content: flex-start; /* Adjust to align the logo and button to the start */
+      align-items: center; /* Align items vertically in the nav */
+      height: 10vh;
+      position: relative; /* Set position to relative */
+    }
+  
+    .logo-container {
+      width: 68%; /* Adjust as needed */
+      margin: 4px;
+      
+    }
+  
+    .nav-menu {
+        position: absolute;
+        top: 50%;
+        font-family: 'raleway';
+        cursor: pointer;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #007991;
+        padding: 5px;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 4s ease-in-out;
+        z-index: 1; /* Ensure the menu is above other elements */
+      }
+    
+      .nav-menu.active {
+        display: flex;
+        opacity: 1;
+      }
+    
+      .nav-toggle {
+        display: block;
+        cursor: pointer;
+        margin-left: 75px;
+        z-index: 2; /* Ensure the toggle button is above the menu */
+      }
+
+      ul li{
+        padding: 10px;
+      }
+  
+  
+  
+   
+  
+    .nav-toggle .bar {
+      border-radius: 2px;
+      height: 4px;
+      width: 25px;
+      margin: 5px 0;
+      background-color: white;
+    }
+  }
+  
+
+  /* Media query for tablet devices */
+/* Media query for tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    height: 8vh; /* Adjust the height as needed */
+  }
+
+  .logo-container {
+    width: 60%; /* Adjust the logo container width for tablets */
+    padding:5px
+  }
+
+  .nav-menu {
+      position: absolute;
+        top: 100%;
+        font-family: 'raleway';
+        cursor: pointer;
+    width: 100%; /* Adjust the menu width for tablets */
+    margin-right: 20px; /* Adjust the margin as needed */
+    margin-top: 0; /* Remove the top margin */
+  }
+
+  .nav-toggle {
+    display: block; /* Ensure the toggle button is visible on tablets */
+    margin-left: 210px; /* Adjust the margin for the toggle button */
+  }
+}
+
+
+
+  
+  

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,700;1,300&family=Titillium+Web:wght@300&display=swap');
+
+
+.services{
+    width: 100%;
+    height: 150vh;
+}
+
+.service-text{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    color: #055767; 
+}
+
+.service-header p{
+    text-align: center;
+    font-family: 'inter';
+    font-size: 1.3rem;
+    color: #055767; 
+    padding-bottom: 30px;
+}
+
+.service-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Existing styles */
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 767px) {
+    .services {
+      height: auto; /* Adjust height for smaller screens */
+    }
+  
+    .service-container {
+      flex-direction: column;
+      align-items: center;
+      width: 90%; /* Adjust width for smaller screens */
+      margin: 0 auto;
+    }
+  
+    .service-text {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .service-header p {
+      width: 80%; /* Adjust width for smaller screens */
+      margin: 0 auto;
+    }
+  }
+
+  /* Tabets */
+
+  @media (min-width: 768px) and (max-width:1023px) {
+    .services {
+      height: auto; /* Adjust height for smaller screens */
+    }
+  
+    .service-container {
+      flex-direction: column;
+      align-items: center;
+      width: 80%; /* Adjust width for smaller screens */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .service-text {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+  
+    .service-header p {
+      width: 80%; /* Adjust width for smaller screens */
+      margin: 0 auto;
+    }
+  }
+  
+
