@@ -1,6 +1,10 @@
+header{
+  position: absolute;
+}
+
 nav{
     display: flex;
-    background-color: #007991;
+    background-color: rgba(0, 0, 0, 0);
     width: 100%;
     height: 12vh;
     justify-content: space-between;
@@ -60,7 +64,7 @@ ul li:hover{
         display: none;
         flex-direction: column;
         align-items: center;
-        background-color: #007991;
+        background-color: rgba(0, 0, 0, 0.144);
         padding: 5px;
         box-sizing: border-box;
         opacity: 0;
@@ -126,6 +130,12 @@ ul li:hover{
   }
 }
 
+
+@media (min-width: 1024px){
+  ul{
+    visibility: hidden;
+  }
+}
 
 
   

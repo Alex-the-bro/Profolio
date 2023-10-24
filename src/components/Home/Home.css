@@ -3,8 +3,17 @@
 main{
     width: 100%;
     height: 100vh;
-    background-color: #007991;
+    background-image: url(../../Assets/hero.jpg);
+    background-size: cover;
+    opacity: 3;
     display: flex;
+}
+
+.home-cover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+
 }
 
 .home-text{
@@ -12,6 +21,8 @@ main{
     color:white;
     margin-top: 5%;
     margin-left: 2%;
+    position: relative;
+    top: 50%;
 }
 
 .heading{
@@ -35,20 +46,78 @@ button{
     padding: 200px;
 }
 
+.scroller{
+  width: 50px;
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50px;
+}
+
+.scroll-circle{
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  position: relative;
+  top:40%;
+  left:38%;
+  border-radius: 50%;
+}
+
+.scroll-icon-container{
+  position: relative;
+  top: 65%; /* Adjust this value as needed */
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height: 80px;
+}
+
+.scroll-icon-container p{
+  color: white;
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: smaller;
+  
+}
+
 /* Existing styles */
 
 /* Media queries for responsiveness */
+
+@media (min-width: 375px) {
+  .scroll-icon-container {
+    visibility: hidden;
+    
+  }
+
+  .scroller{
+    width: 40px;
+    height: 62px;
+  }
+
+  .scroll-circle{
+    width: 10px;
+    height: 10px;
+  }
+
+  .scroll-icon-container p{
+    margin-right: 16px;
+  }
+}
+
 @media (max-width: 768px) {
     main {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow-y: hidden;
+
     }
   
     .home-text {
       width: 80%; /* Adjust as needed */
       margin: 10%; /* Adjust margins */
+      top: 25%;
     }
   
     .home-image {
@@ -73,6 +142,15 @@ button{
       padding: 10px 20px; /* Adjust padding */
       font-size: 1rem; /* Adjust font size */
     }
+
+    .scroll-icon-container{
+      position: relative;
+      top: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60px;
+      height: 80px;
+    }
   }
   
   /* Media query for tablet devices */
@@ -86,8 +164,9 @@ button{
 
   .home-text {
     width: 60%; /* Adjust the width of the text container for tablets */
-    margin: 0; /* Remove the margin to center the text */
-    margin-top: 20%; /* Adjust margins */
+    margin-left: auto; /* Remove the margin to center the text */
+    margin-right: auto;
+    margin-top: 10%; /* Adjust margins */
   }
 
   .home-image {
@@ -110,6 +189,9 @@ button{
     padding: 15px 30px; /* Adjust button padding for tablets */
     font-size: 1.2rem; /* Adjust the font size for tablets */
   }
+
+  .scroll-icon-container{
+    visibility: hidden;  }
 }
 
 /* Media query for laptop devices */
@@ -123,7 +205,8 @@ button{
 
   .home-text {
     width: 40%; /* Adjust the width of the text container for laptops */
-    margin-left: 10%; /* Remove the margin to center the text */
+   margin-left: auto;/* Remove the margin to center the text */
+   margin-right: auto;
     margin-top: -200px; /* Adjust margins */
   }
 
@@ -148,5 +231,14 @@ button{
     padding: 20px 40px; /* Adjust button padding for laptops */
     font-size: 1.5rem; /* Restore the original font size for laptops */
   }
+
+  .scroll-icon-container{
+    visibility: visible;
+  }
 }
 
+@media (min-width: 1200px) {
+  .scroll-icon-container p{
+    margin-left: 6px;
+  }
+}

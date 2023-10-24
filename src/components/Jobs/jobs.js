@@ -46,7 +46,8 @@ const Jobs = () => {
             imageSrc={service.imageSrc}
             description={service.description}
             buttonText={service.buttonText}
-            whatsappNumber={formatWhatsAppNumber('078 842 0053')} // Format the WhatsApp number
+            whatsappNumber={formatWhatsAppNumber('27788420053')} // Format the WhatsApp number
+            formatWhatsAppNumber={formatWhatsAppNumber}
           />
         ))}
       </div>
